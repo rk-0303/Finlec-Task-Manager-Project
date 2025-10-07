@@ -1,10 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const { register, login, getMe } = require('../controllers/authController'); // Add getMe
-const auth = require('../middleware/authMiddleware'); // Import auth middleware
 
+// Import the controller functions, including getMe
+const { register, login, getMe } = require('../controllers/authController');
+
+// Import the authentication middleware
+const auth = require('../middleware/authMiddleware');
+
+// Public routes
 router.post('/register', register);
 router.post('/login', login);
-router.get('/me', auth, getMe); // Add this new route
+
+// Private route for getting user data
+router.get('/me', auth, getMe);
 
 module.exports = router;
