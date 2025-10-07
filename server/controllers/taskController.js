@@ -55,3 +55,23 @@ exports.deleteTask = async (req, res) => {
         res.status(500).send('Server Error');
     }
 };
+
+exports.getTaskById = async (req, res) => {
+    try {
+        const task = await Task.findById(req.params.id);
+
+        if (!task) {
+            return res.status(404).json({ msg: 'Task not found' });
+        }
+
+        // Make sure user owns the task
+        if (task.user.toString() !== req.user.id) {
+            return res.status(401).json({ msg: 'Not authorized' });
+        }
+
+        res.json(task);
+    } catch (err) {
+        console.error(err.message);
+        res.status(500).send('Server Error');
+    }
+};
