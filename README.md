@@ -1,4 +1,4 @@
-# TaskFin - Full-Stack Task Management Application
+# TaskManager - Full-Stack Task Management Application
 
 A complete full-stack task management application built with the MERN stack (MongoDB, Express, React, Node.js). This project allows users to securely register, log in, and perform full CRUD (Create, Read, Update, Delete) operations on their tasks.
 

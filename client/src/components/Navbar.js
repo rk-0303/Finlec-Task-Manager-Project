@@ -36,7 +36,7 @@ const Navbar = () => {
         <nav className="bg-slate-800 text-white shadow-lg">
             <div className="container mx-auto flex justify-between items-center p-4">
                 <h1 className="text-xl font-bold">
-                    TaskFin
+                    TaskManager
                 </h1>
                 <div className="font-medium">{token ? authLinks : guestLinks}</div>
             </div>
