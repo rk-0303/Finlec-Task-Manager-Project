@@ -8,6 +8,7 @@ import TasksPage from './pages/TasksPage';
 import CreateTaskPage from './pages/CreateTaskPage';
 import ProfilePage from './pages/ProfilePage';
 import Navbar from './components/Navbar';
+import EditTaskPage from './pages/EditTaskPage';
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                         <Route path="/" element={<Dashboard />} />
                         <Route path="/tasks" element={<TasksPage />} />
                         <Route path="/create-task" element={<CreateTaskPage />} />
+                         <Route path="/edit-task/:id" element={<EditTaskPage />} />
                         <Route path="/profile" element={<ProfilePage />} />
                     </Routes>
                 </main>

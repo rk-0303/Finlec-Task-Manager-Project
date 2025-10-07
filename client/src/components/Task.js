@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Task = ({ task }) => {
     const token = localStorage.getItem('token');
@@ -70,6 +71,9 @@ const Task = ({ task }) => {
                     <option value="In-progress">In-progress</option>
                     <option value="Done">Done</option>
                 </select>
+                 <Link to={`/edit-task/${task._id}`} className="bg-gray-200 text-gray-700 px-3 py-1 rounded hover:bg-gray-300 text-sm transition-colors">
+                    Edit
+                </Link>
                 <button onClick={onDelete} className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 text-sm transition-colors">
                     Delete
                 </button>
