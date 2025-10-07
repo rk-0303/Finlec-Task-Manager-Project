@@ -40,10 +40,10 @@ A complete full-stack task management application built with the MERN stack (Mon
 ## Application Screenshots
 
 
-![Login Page Screenshot](./screenshots/login-page.png)
+![Login Page Screenshot](./screenshot/login-page.png)
 *Login Page with modern UI*
 
-![Tasks Page Screenshot](./screenshots/tasks-page.png)
+![Tasks Page Screenshot](./screenshot/tasks-page.png)
 *Dashboard showing color-coded tasks*
 
 ---
